@@ -2,11 +2,12 @@ body {background-color: rgb(100, 110, 120);
 width: 1000px;
 align-items: center;
 margin:auto;
-outline: solid 5px rgb(141, 152, 167); 
+outline: solid 5px rgb(141, 152, 167);
 }
 
 header {background-color: rgb(219, 43, 57);
 text-align: center;
+
 }
 
 #logo {width: 50px;}
@@ -34,20 +35,58 @@ a, a:hover, a:focus, a:active {
     color: inherit;
 }
 
-section {background-color: rgb(253, 240, 213);
-height: 600px;}
+section {  
+background-color: rgb(253, 240, 213);
+height: 600px;
+font-family: "Georgia";}
+
+#game_screen {
+display: block-flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#controls {
+margin-top: 100px;
+margin-bottom: 0;
+padding: 20px;
+background-color: rgba(141, 152, 167, 0.3);
+border-top-left-radius: 200px;
+border-top-right-radius: 200px;
+}
+
+table {
+margin: auto;
+width: 500px;
+}
+
+td {background-color: rgba(141, 152, 167, 0.3);
+padding-left: 35px;
+padding-right: 35px;
+margin: 0px;}
 
 canvas {width: 1000px;
     height: 600px;
 background-color: black;}
 
-#rock {
-display: block;
-margin: auto;
-justify-content: center;
+#startbutton {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 100;
+    padding: 20px;
+    background-color: rgba(141, 152, 167, 0.3);
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
+}
+#startbutton:hover {
+    background-color: whitesmoke;
+    cursor: pointer;
 }
 
-footer {background-color: rgb(141, 152, 167);}
+footer {
+    background-color: rgb(141, 152, 167);
+}
 #footertext {
     color: white;
     margin-top: 0;
