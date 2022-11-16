@@ -8,7 +8,7 @@ export class Choice extends Entity {
     super(position);
     this.color = "gray";
     this.radius = 30;
-    this.velocity = new Velocity(5, 5);
+    this.velocity = new Velocity(1, 1);
     this.type = ["rock", "paper", "scissors"]
     this.rounds = 0;
     this.amount = 3;

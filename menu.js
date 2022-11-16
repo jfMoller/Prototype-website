@@ -1,28 +1,28 @@
 import { clearChildren } from "./utiltity.js"
-
+import { setupGame } from "./gameCSS.js"
+ 
 let content = document.getElementById("dynamic_content")
-let canvas = null;
 
 function setupMenu() {
-let startButton = document.createElement("div");
+let start_button = document.createElement("div");
 
 
-startButton.innerText = "START GAME";
+start_button.innerText = "START GAME";
 
 
-startButton.setAttribute("id", "start_button")
+start_button.setAttribute("id", "start_button")
 
 
-startButton.addEventListener( "click", () => {
-setupGame();
+start_button.addEventListener( "click", () => {
+startGame();
 })
 
-content.appendChild(startButton);
+content.appendChild(start_button);
 
 }
 setupMenu();
 
-function setupGame() {
+function startGame() {
 clearChildren(content);
-window.location.href = "game.html";
+setupGame();
 }

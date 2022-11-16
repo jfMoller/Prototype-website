@@ -43,11 +43,29 @@ background-color: rgb(253, 240, 213);
 height: 600px;
 font-family: "Georgia";}
 
+section img {
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+    width: 500px;
+
+}
+
 #dynamic_content {
-display: block-flex;
+display: flex;
 align-items: center;
 justify-content: center;
-text-align: center;
+
+}
+
+#rock {
+    margin: auto;
+}
+#paper {
+    margin: auto;
+}
+#scissors {
+    margin: auto;
 }
 
 #controls {
@@ -73,20 +91,6 @@ canvas {width: 1000px;
     height: 600px;
 background-color: rgba(0, 0, 0);}
 
-#startbutton {
-    font-size: 30px;
-    margin-top: 0;
-    margin-bottom: 100;
-    padding: 20px;
-    background-color: rgba(141, 152, 167, 0.3);
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
-}
-#startbutton:hover {
-    background-color: whitesmoke;
-    cursor: pointer;
-}
-
 footer {
     background-color: rgb(141, 152, 167);
 }
@@ -98,10 +102,8 @@ footer {
 }
 
 #start_button {
-    margin-top: 500px;
-    display:inline-flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: 40px;
+    display: inline-block;
     background-color: rgb(219, 43, 57);
     padding-left: 20px;
     padding-right: 20px;
@@ -114,3 +116,21 @@ cursor: pointer;
 border-bottom-left-radius: 10px;
 border-top-right-radius: 10px;}
 
+/* ANIMATIONS */
+.animate {
+    position: relative;
+    animation-name: top, right;
+    animation-duration: 5s, 5s;  
+    animation-delay: 0s, 5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes top {
+    from {top: 0px;}
+    to {top: -200px;}
+  }
+  @keyframes right {
+    from {right: 0px;}
+    to {right: -200px;}
+  }
+  
