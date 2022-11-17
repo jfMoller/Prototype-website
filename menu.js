@@ -1,5 +1,5 @@
 import { clearChildren } from "./utiltity.js"
-import { setupGame } from "./gameCSS.js"
+import { setupGameForPlayer1, setupGameForPlayer2 } from "./game.js"
  
 let content = document.getElementById("dynamic_content")
 
@@ -24,5 +24,6 @@ setupMenu();
 
 function startGame() {
 clearChildren(content);
-setupGame();
+setupGameForPlayer1();
+setupGameForPlayer2();
 }

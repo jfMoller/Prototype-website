@@ -1,39 +1,73 @@
-import { Choice } from "./choice.js";
-import { Position } from "./entity.js";
+let content = document.getElementById("dynamic_content")
 
-const canvas = document.getElementById("canvas");
-const context = canvas.getContext("2d");
-export const width = canvas.width;
-export const height = canvas.height;
+export function setupGameForPlayer1() {
 
-class Game {
-  constructor(canvas, context) {
-    this.canvas = canvas;
-    this.context = context;
-    this.entities = [
-      new Choice(new Position(width * 0.25, height)),
-      new Choice(new Position(width * 0.75, height)),
-    ];
-    this.player = this.entities[0];
-    this.computer = this.entities[1];
-    this.index = null;
-  }
-  run() {
-    render();
-  }
-}
+    let rock = document.createElement("div");
+    let paper = document.createElement("div");
+    let scissors = document.createElement("div");
+    
+    
+    rock.innerText = "ROCK";
+    paper.innerText = "PAPER";
+    scissors.innerText = "SCISSORS";
+    
+    rock.setAttribute("id", "rock")
+    paper.setAttribute("id", "paper")
+    scissors.setAttribute("id", "scissors")
 
-let game = new Game(canvas, context);
-game.run();
-
-function render() {
-    context.clearRect(0, 0, width, height);
-
-    for (game.index = 0; game.index < game.entities.length; ++game.index) {
-      let entity = game.entities[game.index];
-      entity.draw(context);
-      entity.animate(game, context);
+    rock.setAttribute("class", "choices")
+    paper.setAttribute("class", "choices")
+    scissors.setAttribute("class", "choices")
+    
+    
+    rock.addEventListener( "click", () => {
+    rock.setAttribute("class", "animate")
+    })
+    paper.addEventListener( "click", () => {
+    paper.setAttribute("class", "animate")
+    })
+    scissors.addEventListener( "click", () => {
+    scissors.setAttribute("class", "animate")
+    })
+    
+    content.appendChild(rock);
+    content.appendChild(paper);
+    content.appendChild(scissors);
+    
     }
+export function setupGameForPlayer2() {
 
-    requestAnimationFrame(render);
-  }
+    let rock2 = document.createElement("div");
+    let paper2 = document.createElement("div");
+    let scissors2 = document.createElement("div");
+    
+    
+    rock2.innerText = "ROCK2";
+    paper2.innerText = "PAPER2";
+    scissors2.innerText = "SCISSORS2";
+    
+    rock2.setAttribute("id", "rock2")
+    paper2.setAttribute("id", "paper2")
+    scissors2.setAttribute("id", "scissors2")
+
+    rock2.setAttribute("class", "choices2")
+    paper2.setAttribute("class", "choices2")
+    scissors2.setAttribute("class", "choices2")
+    
+    
+    rock2.addEventListener( "click", () => {
+    rock2.setAttribute("class", "animate2")
+    })
+    paper2.addEventListener( "click", () => {
+    paper2.setAttribute("class", "animate2")
+    })
+    scissors2.addEventListener( "click", () => {
+    scissors2.setAttribute("class", "animate2")
+    })
+    
+    content.appendChild(rock2);
+    content.appendChild(paper2);
+    content.appendChild(scissors2);
+    
+    }
+    
