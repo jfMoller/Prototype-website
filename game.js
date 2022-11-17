@@ -1,6 +1,19 @@
-let content = document.getElementById("dynamic_content")
+let content = document.getElementById("dynamic_container")
+
+let left = document.createElement("div")
+left.setAttribute("id", "left")
+
+let middle = document.createElement("div")
+middle.setAttribute("id", "middle")
+
+let right = document.createElement("div")
+right.setAttribute("id", "right")
+
+
 
 export function setupGameForPlayer1() {
+
+    content.appendChild(left);
 
     let rock = document.createElement("div");
     let paper = document.createElement("div");
@@ -9,15 +22,12 @@ export function setupGameForPlayer1() {
     
     rock.innerText = "ROCK";
     paper.innerText = "PAPER";
-    scissors.innerText = "SCISSORS";
+    scissors.innerText = "SCISS";
     
     rock.setAttribute("id", "rock")
     paper.setAttribute("id", "paper")
     scissors.setAttribute("id", "scissors")
 
-    rock.setAttribute("class", "choices")
-    paper.setAttribute("class", "choices")
-    scissors.setAttribute("class", "choices")
     
     
     rock.addEventListener( "click", () => {
@@ -30,12 +40,16 @@ export function setupGameForPlayer1() {
     scissors.setAttribute("class", "animate")
     })
     
-    content.appendChild(rock);
-    content.appendChild(paper);
-    content.appendChild(scissors);
+    left.appendChild(rock);
+    left.appendChild(paper);
+    left.appendChild(scissors);
     
     }
+    
 export function setupGameForPlayer2() {
+
+    
+content.appendChild(right);
 
     let rock2 = document.createElement("div");
     let paper2 = document.createElement("div");
@@ -44,15 +58,13 @@ export function setupGameForPlayer2() {
     
     rock2.innerText = "ROCK2";
     paper2.innerText = "PAPER2";
-    scissors2.innerText = "SCISSORS2";
+    scissors2.innerText = "SCISS2";
     
     rock2.setAttribute("id", "rock2")
     paper2.setAttribute("id", "paper2")
     scissors2.setAttribute("id", "scissors2")
 
-    rock2.setAttribute("class", "choices2")
-    paper2.setAttribute("class", "choices2")
-    scissors2.setAttribute("class", "choices2")
+
     
     
     rock2.addEventListener( "click", () => {
@@ -65,9 +77,17 @@ export function setupGameForPlayer2() {
     scissors2.setAttribute("class", "animate2")
     })
     
-    content.appendChild(rock2);
-    content.appendChild(paper2);
-    content.appendChild(scissors2);
+    right.appendChild(rock2);
+    right.appendChild(paper2);
+    right.appendChild(scissors2);
     
     }
-    
+
+    export function setupArena() {
+        content.appendChild(middle);
+
+        let arena = document.createElement("div");
+        arena.setAttribute("id", "arena")
+
+        middle.appendChild(arena);
+    }
