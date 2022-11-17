@@ -1,13 +1,19 @@
 let content = document.getElementById("dynamic_container")
 
+
 let left = document.createElement("div")
 left.setAttribute("id", "left")
+left.innerText = "player"
 
 let middle = document.createElement("div")
 middle.setAttribute("id", "middle")
 
 let right = document.createElement("div")
 right.setAttribute("id", "right")
+right.innerText = "computer"
+
+let arena = document.createElement("div");
+arena.setAttribute("id", "arena")
 
 
 
@@ -15,10 +21,12 @@ export function setupGameForPlayer1() {
 
     content.appendChild(left);
 
+    
     let rock = document.createElement("div");
     let paper = document.createElement("div");
     let scissors = document.createElement("div");
     
+   
     
     rock.innerText = "ROCK";
     paper.innerText = "PAPER";
@@ -85,9 +93,6 @@ content.appendChild(right);
 
     export function setupArena() {
         content.appendChild(middle);
-
-        let arena = document.createElement("div");
-        arena.setAttribute("id", "arena")
-
         middle.appendChild(arena);
+    
     }

@@ -53,17 +53,24 @@ justify-content: space-around;
 }
 
 #left {
+height: 300px;
 display: flex;
 flex-direction: column;
 gap: 20px;
+text-align: center;
+text-transform: uppercase;
 }
 #middle {
-
+  text-align: center;
+  text-transform: uppercase;
 }
 #right {
+  height: 300px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: center;
+text-transform: uppercase;
 }
 
 #arena {
@@ -71,6 +78,7 @@ gap: 20px;
   height: 300px;
   width:300px;
   border-radius: 1000px;
+  gap: 20px;
 }
 
 #rock {
@@ -173,10 +181,10 @@ border-top-right-radius: 10px;}
     animation-fill-mode: forwards;
   }
   
-  @keyframes top {
+/*   @keyframes top {
     from {top: 0px;}
     to {top: -100px;}
-  }
+  } */
   @keyframes right {
     from {right: 0px;}
     to {right: -200px;}
