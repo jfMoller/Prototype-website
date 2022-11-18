@@ -170,7 +170,8 @@ footer {
 #start_button:hover {
 cursor: pointer;
 border-bottom-left-radius: 10px;
-border-top-right-radius: 10px;}
+border-top-right-radius: 10px;;}
+
 
 /* ANIMATIONS */
 .animate {
@@ -198,10 +199,10 @@ border-top-right-radius: 10px;}
     animation-fill-mode: forwards;
   }
   
-  @keyframes top2 {
+/*   @keyframes top2 {
     from {top: 0px;}
     to {top: 100px;}
-  }
+  } */
   @keyframes right2 {
     from {left: 0px;}
     to {left: -200px;}
